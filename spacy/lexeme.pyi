@@ -1,8 +1,7 @@
-from typing import (
-    Union,
-    Any,
-)
+from typing import Any, Union
+
 from thinc.types import Floats1d
+
 from .tokens import Doc, Span, Token
 from .vocab import Vocab
 
@@ -19,13 +18,14 @@ class Lexeme:
     @property
     def vector_norm(self) -> float: ...
     vector: Floats1d
-    rank: str
+    rank: int
     sentiment: float
     @property
     def orth_(self) -> str: ...
     @property
     def text(self) -> str: ...
-    lower: str
+    orth: int
+    lower: int
     norm: int
     shape: int
     prefix: int
